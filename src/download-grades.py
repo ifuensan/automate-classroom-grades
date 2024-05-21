@@ -197,15 +197,33 @@ if __name__ == "__main__":
 def get_assignment_commits(assignment_id):
     # Get the list of repositories using the GitHub CLI
     users_commits = os.popen(f'gh classroom accepted-assignments -a {assignment_id}').read()
+    print(f"{users_commits}\n")
     # Split the classrooms by newline character
     users_commits = users_commits.split('\n')
     # Remove the first three lines
     users_commits = users_commits[3:]
     ## Remove the first three lines
     #command_output = command_output.split('\n')[3:]
-    print(users_commits)
+    #print(users_commits[0])
+    #print(users_commits[1])
     # Create a DataFrame from the command output
-    df = pd.DataFrame([x.split() for x in users_commits], columns=['ID', 'Submitted', 'Passing', 'Commit Count', 'Grade', 'Feedback Pull Request URL', 'Student', 'Repository'])
+    df = pd.DataFrame([x.split() for x in users_commits[1:]], columns=['id', 'submitted', 'passing', 'commits', 'github_username', 'feedback', 'other'])
     print(df)
 
 get_assignment_commits(605580)
+
+def get_assignment_commits(assignment_id):
+    # Get the list of repositories using the GitHub CLI
+    users_commits = os.popen(f'gh classroom accepted-assignments -a {assignment_id}').read()
+    print(f"{users_commits}\n")
+    # Split the classrooms by newline character
+    users_commits = users_commits.split('\n')
+    # Remove the first three lines
+    users_commits = users_commits[3:]
+    ## Remove the first three lines
+    #command_output = command_output.split('\n')[3:]
+    #print(users_commits[0])
+    #print(users_commits[1])
+    # Create a DataFrame from the command output
+    df = pd.DataFrame([x.split() for x in users_commits[1:]], columns=['id', 'submitted', 'passing', 'commits', 'github_username', 'feedback', 'other'])
+    print(df)
