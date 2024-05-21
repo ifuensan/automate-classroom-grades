@@ -1,1 +1,4 @@
 csvs/*.csv
+*.xlsx
+*.xls
+*.csv
