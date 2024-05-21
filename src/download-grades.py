@@ -140,6 +140,19 @@ def download_grades_for_assignments(assignment_data, path):
             print(f"Assignment {assignment_id}.")
 
 def consolidate_grades(path):
+    """
+    Consolidates grades from multiple CSV files into a single Excel file.
+
+    Args:
+        path (str): The path to the directory containing the CSV files.
+
+    Returns:
+        None
+
+    Raises:
+        FileNotFoundError: If the specified directory does not exist.
+
+    """
     # Get the list of new CSV files
     all_files = sorted(glob.glob(path + "*.csv"), key=lambda x: x.split('/')[-1])
 
