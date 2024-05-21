@@ -5,6 +5,15 @@ import datetime
 import glob
 
 def get_classroom_id(classroom_name):
+    """
+    Function to get the ID of a classroom given its name.
+    
+    Parameters:
+    - classroom_name (str): The name of the classroom.
+    
+    Returns:
+    - str: The ID of the classroom if found, None otherwise.
+    """
     # Get the list of repositories using the GitHub CLI
     classrooms = os.popen('gh classroom list').read()
     # Split the classrooms by newline character
