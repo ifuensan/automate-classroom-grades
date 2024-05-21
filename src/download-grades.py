@@ -95,15 +95,30 @@ def download_grades(assignment_id, path):
 
 # Function to delete old CSV files
 def delete_old_csv_files(path):
+    """
+    Deletes all old CSV files in the specified path.
+
+    Parameters:
+    path (str): The path where the CSV files are located.
+
+    Returns:
+    None
+    """
     old_files = glob.glob(path + "*.csv")
     for file in old_files:
         os.remove(file)
 
 def format_assignment_name(name):
-    # Eliminar espacios y unir palabras con guiones
-    name = name.replace(' ', '-')
+    """
+    Formats the assignment name by replacing spaces with hyphens and limiting the length to 30 characters.
     
-    # Limitar la longitud a 30 caracteres
+    Args:
+        name (str): The assignment name to be formatted.
+    
+    Returns:
+        str: The formatted assignment name.
+    """
+    name = name.replace(' ', '-')
     return name[:30]
 
 def download_grades_for_assignments(assignment_data, path):
