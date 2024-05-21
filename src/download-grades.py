@@ -93,7 +93,6 @@ def download_grades(assignment_id, path):
         print(f"Error occurred while downloading grades: {str(e)}")
         #return file_grades_dir, False
 
-# Function to delete old CSV files
 def delete_old_csv_files(path):
     """
     Deletes all old CSV files in the specified path.
