@@ -66,6 +66,16 @@ def get_assignments(classroom_id):
     return assignment_data
 
 def download_grades(assignment_id, path):
+    """
+    Downloads the grades for a specific assignment from GitHub Classroom.
+
+    Args:
+        assignment_id (str): The ID of the assignment.
+        path (str): The path where the grades file will be saved.
+
+    Returns:
+        tuple: A tuple containing the file path and a boolean indicating whether the download was successful.
+    """
     # Get the file of one assignment id using the GitHub CLI
     directory = path
     if not os.path.exists(directory):
