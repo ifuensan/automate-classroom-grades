@@ -193,7 +193,7 @@ if __name__ == "__main__":
 
     # Consolidate grades
     consolidate_grades(path)
-    
+  
 def get_assignment_commits(assignment_id):
     # Get the list of repositories using the GitHub CLI
     users_commits = os.popen(f'gh classroom accepted-assignments -a {assignment_id}').read()
