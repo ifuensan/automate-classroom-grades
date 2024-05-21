@@ -36,6 +36,16 @@ def get_classroom_id(classroom_name):
     return None
 
 def get_assignments(classroom_id):
+    """
+    Retrieves the assignments for the given classroom ID.
+
+    Args:
+        classroom_id (str): The ID of the classroom.
+
+    Returns:
+        list: A list of tuples containing the assignment ID, name, and repository.
+
+    """
     # Run the command to get assignments for the given classroom ID using the GitHub CLI
     assignments = os.popen(f'gh classroom assignments -c {classroom_id}').read()
     # Process the output and extract the assignment details
