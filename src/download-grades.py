@@ -64,27 +64,6 @@ def download_grades(assignment_id, path):
         print(f"Error occurred while downloading grades: {str(e)}")
         #return file_grades_dir, False
 
-def parse_csv(file_path):
-    try:
-        # Read the CSV file into a pandas DataFrame
-        df = pd.read_csv(file_path) 
-        # Process the DataFrame as needed
-        github_username = df['github_username']
-        points_awarded = df['points_awarded']
-        points_available = df['points_available']
-        # Or iterate over the rows like this:
-        df_sorted = df.sort_values(by='points_awarded', ascending=False)
-        print(f"{'github_username':<20} {'points_awarded':>2}/{'points_available'}") 
-        for index, row in df_sorted.iterrows():
-            github_username = row['github_username']
-            points_awarded = row['points_awarded']
-            points_available = row['points_available']
-            # Process the assignment data
-            print(f"{github_username:<20} {points_awarded:>2}/{points_available}")
-        return df_sorted
-    except FileNotFoundError as e:
-        print(f"Error occurred while parsing CSV: {str(e)}")
-
 # Function to delete old CSV files
 def delete_old_csv_files(path):
     old_files = glob.glob(path + "*.csv")
