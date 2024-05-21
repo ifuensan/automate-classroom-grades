@@ -184,8 +184,6 @@ def get_assignment_commits(assignment_id):
     users_commits = users_commits.split('\n')
     # Remove the first three lines
     users_commits = users_commits[3:]
-    ## Remove the first three lines
-    #command_output = command_output.split('\n')[3:]
     #print(users_commits[0])
     #print(users_commits[1])
     # Create a DataFrame from the command output
