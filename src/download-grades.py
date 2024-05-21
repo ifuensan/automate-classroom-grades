@@ -203,9 +203,9 @@ def get_assignment_commits(assignment_id):
     users_commits = users_commits[3:]
     ## Remove the first three lines
     #command_output = command_output.split('\n')[3:]
-    print(users_commits)º:while
+    print(users_commits)
     # Create a DataFrame from the command output
-    df = pd.DataFrame([x.split() for x in users_commits], columns=['ID', 'Submitted', 'Passing', 'Commit Count', 'Grade', 'Feedback', 'Pull Request URL', 'Student', 'Repository'])
+    df = pd.DataFrame([x.split() for x in users_commits], columns=['ID', 'Submitted', 'Passing', 'Commit Count', 'Grade', 'Feedback Pull Request URL', 'Student', 'Repository'])
     print(df)
 
 get_assignment_commits(605580)
