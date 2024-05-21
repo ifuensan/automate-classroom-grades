@@ -177,6 +177,15 @@ def consolidate_grades(path):
     consolidated_df.to_excel(file_name, index=False)
 
 def get_assignment_commits(assignment_id):
+    """
+    Retrieves the list of commits for the accepted assignments of a specific assignment.
+
+    Args:
+        assignment_id (int): The ID of the assignment.
+
+    Returns:
+        None
+    """
     # Get the list of repositories using the GitHub CLI
     users_commits = os.popen(f'gh classroom accepted-assignments -a {assignment_id}').read()
     print(f"{users_commits}\n")
@@ -184,8 +193,6 @@ def get_assignment_commits(assignment_id):
     users_commits = users_commits.split('\n')
     # Remove the first three lines
     users_commits = users_commits[3:]
-    #print(users_commits[0])
-    #print(users_commits[1])
     # Create a DataFrame from the command output
     df = pd.DataFrame([x.split() for x in users_commits[1:]], columns=['id', 'submitted', 'passing', 'commits', 'github_username', 'feedback', 'other'])
     print(df)
