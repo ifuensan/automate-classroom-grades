@@ -3,6 +3,7 @@ from time import sleep
 import pandas as pd
 import datetime
 import glob
+import pandas as pd
 
 def get_classroom_id(classroom_name):
     """
@@ -192,3 +193,19 @@ if __name__ == "__main__":
 
     # Consolidate grades
     consolidate_grades(path)
+    
+def get_assignment_commits(assignment_id):
+    # Get the list of repositories using the GitHub CLI
+    users_commits = os.popen(f'gh classroom accepted-assignments -a {assignment_id}').read()
+    # Split the classrooms by newline character
+    users_commits = users_commits.split('\n')
+    # Remove the first three lines
+    users_commits = users_commits[3:]
+    ## Remove the first three lines
+    #command_output = command_output.split('\n')[3:]
+    print(users_commits)º:while
+    # Create a DataFrame from the command output
+    df = pd.DataFrame([x.split() for x in users_commits], columns=['ID', 'Submitted', 'Passing', 'Commit Count', 'Grade', 'Feedback', 'Pull Request URL', 'Student', 'Repository'])
+    print(df)
+
+get_assignment_commits(605580)
