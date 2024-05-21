@@ -122,6 +122,16 @@ def format_assignment_name(name):
     return name[:30]
 
 def download_grades_for_assignments(assignment_data, path):
+    """
+    Downloads grades for assignments.
+
+    Args:
+        assignment_data (list): A list of assignment data.
+        path (str): The path where the grades will be downloaded.
+
+    Returns:
+        None
+    """
     print("Downloading grades...")
     for assignment in assignment_data:
         assignment_id = assignment[0]
