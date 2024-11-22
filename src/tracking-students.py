@@ -19,6 +19,11 @@ def get_commits(repo, username):
     user_commits = [commit for commit in commits if commit.author.login == username]
     return user_commits
 
+def get_commits_by_author(repo, username):
+    query = f"repo:{repo.full_name} author:{username}"
+    results = repo.search(query)
+    return results
+
 # Función para obtener el número de comentarios de un usuario en un repositorio
 def get_comments(repo, username):
     comments = repo.get_issues_comments()
@@ -35,7 +40,7 @@ def get_user_activity(repo_url, username, token):
     prs_count = get_open_prs(repo, username)
     comments_count = get_comments(repo, username)
     
-    commits_count = get_commits(repo, username)
+    commits_count = get_commits_by_author(repo, username)
     
     return {
         'username': username,
