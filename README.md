@@ -14,7 +14,7 @@ gh extension install github/gh-classroom
 
 Este comando descargará e instalará la extensión `gh-classroom` en tu entorno de `gh`, permitiéndote utilizar los comandos adicionales proporcionados por el plugin.
 
-En este repositorio pretendo hacer un resumen de los comandos principales que luego usaré para programa Pythom, pero [aquí](https://github.com/github/gh-classroom)se puede encontrar una explicación mucho más completa del plugin.
+En este repositorio pretendo hacer un resumen de los comandos principales que luego usaré para el programa, pero [aquí](https://github.com/github/gh-classroom) se puede encontrar una explicación mucho más completa del plugin.
 
 ## Get assignments
 
