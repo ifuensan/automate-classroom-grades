@@ -1,24 +1,34 @@
 # Automate Github Classroom Grades Reports
 
-## GH Classroom plugin
-Using GH Classroom plugin https://github.com/github/gh-classroom
+## GitHub Classroom CLI
 
-```
+El plugin `gh-classroom` es una extensión para la herramienta de línea de comandos de GitHub (`gh`) que facilita la gestión de asignaciones y repositorios de estudiantes en GitHub Classroom. Con este plugin, puedes listar asignaciones, clonar repositorios de estudiantes, y obtener calificaciones de manera sencilla y eficiente.
+
+### Instalación
+
+Para instalar el plugin `gh-classroom`, ejecuta el siguiente comando:
+
+```bash
 gh extension install github/gh-classroom
 ```
 
+Este comando descargará e instalará la extensión `gh-classroom` en tu entorno de `gh`, permitiéndote utilizar los comandos adicionales proporcionados por el plugin.
+
+En este repositorio pretendo hacer un resumen de los comandos principales que luego usaré para programa Pythom, pero [aquí](https://github.com/github/gh-classroom)se puede encontrar una explicación mucho más completa del plugin.
+
 ## Get Assignments
-```
+
+```bash
 gh classroom assignments
 ```
 
-```
+```bash
 ID  Title  Submission Public  Type  Deadline  Editor  Invitation Link  Accepted  Submissions  Passing
 ```
 
 ### Grades
 
-```
+```bash
 gh classroom assignment-grades
 ```
 
