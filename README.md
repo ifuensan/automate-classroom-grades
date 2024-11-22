@@ -16,7 +16,7 @@ Este comando descargará e instalará la extensión `gh-classroom` en tu entorno
 
 En este repositorio pretendo hacer un resumen de los comandos principales que luego usaré para programa Pythom, pero [aquí](https://github.com/github/gh-classroom)se puede encontrar una explicación mucho más completa del plugin.
 
-## Get Assignments
+## Get assignments
 
 ```bash
 gh classroom assignments
@@ -32,7 +32,7 @@ ID  Title  Submission Public  Type  Deadline  Editor  Invitation Link  Accepted 
 gh classroom assignment-grades
 ```
 
-### Accepted Assignments
+### Accepted assignments
 
 El comando `gh classroom accepted-assignments` se utiliza para listar las asignaciones aceptadas en GitHub Classroom. Aquí hay una explicación detallada de cómo usar este comando:
 
@@ -42,7 +42,7 @@ gh classroom accepted-assignments
 
 Este comando, sin ningún argumento adicional, mostrará una lista de todas las asignaciones aceptadas en tu GitHub Classroom.
 
-#### Ejemplos de Uso
+#### Ejemplos de uso
 
 Si deseas omitir el paso de selección y especificar directamente el ID de la asignación, puedes usar la opción `-a` seguida del ID de la asignación. Aquí hay dos ejemplos:
 
@@ -54,9 +54,9 @@ gh classroom clone student-repos -a 612817 # student repo id
 - **`gh classroom accepted-assignments -a 605580`**: Este comando lista las asignaciones aceptadas para la asignación con el ID `605580`.
 - **`gh classroom clone student-repos -a 612817`**: Este comando clona los repositorios de los estudiantes para la asignación con el ID `612817`.
 
-### Explicación del Código Fuente del Fichero .py
+### Explicación del programa Python
 
-A continuación, se explica el código fuente del fichero `.py` de este proyecto. Supongamos que el fichero se llama `classroom.py` y contiene las siguientes funciones:
+A continuación, se explica el código fuente del programa Python de este proyecto. El fichero principal es `download-grades.py` y contiene las siguientes funciones:
 
 ```python
 import requests
@@ -91,7 +91,7 @@ if __name__ == "__main__":
         print(e)
 ```
 
-#### Explicación del Código
+#### Explicación del código
 
 1. **Importación de Módulos**:
     - `import requests`: Importa el módulo `requests` para realizar solicitudes HTTP.
