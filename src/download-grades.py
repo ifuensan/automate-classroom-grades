@@ -21,11 +21,9 @@ def get_classroom_id(classroom_name):
     # Remove the first two lines (header and separator)
     classrooms = classrooms[3:]
     # Loop through each repository
-    #print(classrooms)
     for classroom in classrooms:
         # Split the classroom details by whitespace
         classroom_details = classroom.split()
-        #print(classroom_details)
         # Get the classroom ID and name
         classroom_id = classroom_details[0]
         classroom_name = classroom_details[1]
