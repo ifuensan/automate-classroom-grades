@@ -2,19 +2,19 @@
 
 ## GitHub Classroom CLI
 
-El plugin `gh-classroom` es una extensión para la herramienta de línea de comandos de GitHub (`gh`) que facilita la gestión de asignaciones y repositorios de estudiantes en GitHub Classroom. Con este plugin, puedes listar asignaciones, clonar repositorios de estudiantes, y obtener calificaciones de manera sencilla y eficiente.
+The `gh-classroom` plugin is an extension for the GitHub command-line tool (`gh`) that makes it easy to manage assignments and student repositories in GitHub Classroom. With this plugin, you can list assignments, clone student repositories, and obtain grades easily and efficiently.
 
-### Instalación
+### Install
 
-Para instalar el plugin `gh-classroom`, ejecuta el siguiente comando:
+To install the `gh-classroom` plugin, run the following command:
 
 ```bash
 gh extension install github/gh-classroom
 ```
 
-Este comando descargará e instalará la extensión `gh-classroom` en tu entorno de `gh`, permitiéndote utilizar los comandos adicionales proporcionados por el plugin.
+This command will download and install the `gh-classroom` extension around `gh`, allowing you to use the additional commands provided by the plugin.
 
-En este repositorio pretendo hacer un resumen de los comandos principales que luego usaré para el programa, pero [aquí](https://github.com/github/gh-classroom) se puede encontrar una explicación mucho más completa del plugin.
+In this repository I intend to make a summary of the main commands that I will later use for the program, but [here](https://github.com/github/gh-classroom) you can find a much more complete explanation of the plugin.
 
 ## Get assignments
 
