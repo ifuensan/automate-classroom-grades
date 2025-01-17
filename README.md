@@ -34,29 +34,28 @@ gh classroom assignment-grades
 
 ### Accepted assignments
 
-El comando `gh classroom accepted-assignments` se utiliza para listar las asignaciones aceptadas en GitHub Classroom. Aquí hay una explicación detallada de cómo usar este comando:
+The `gh classroom accepted-assignments` command is used to list accepted assignments in GitHub Classroom. Below is a detailed explanation of how to use this command:
 
 ```bash
 gh classroom accepted-assignments
 ```
+Without additional arguments, this command displays a list of all accepted assignments in your GitHub Classroom.
 
-Este comando, sin ningún argumento adicional, mostrará una lista de todas las asignaciones aceptadas en tu GitHub Classroom.
+#### Usage Examples
 
-#### Ejemplos de uso
-
-Si deseas omitir el paso de selección y especificar directamente el ID de la asignación, puedes usar la opción `-a` seguida del ID de la asignación. Aquí hay dos ejemplos:
+If you want to skip the selection step and directly specify the assignment ID, you can use the `-a` option followed by the assignment ID. Here are two examples:
 
 ```bash
 gh classroom accepted-assignments -a 605580 # accepted assignment id
 gh classroom clone student-repos -a 612817 # student repo id
 ```
 
-- **`gh classroom accepted-assignments -a 605580`**: Este comando lista las asignaciones aceptadas para la asignación con el ID `605580`.
-- **`gh classroom clone student-repos -a 612817`**: Este comando clona los repositorios de los estudiantes para la asignación con el ID `612817`.
+- **`gh classroom accepted-assignments -a 605580`**: Lists the accepted assignments for the assignment with ID `605580`.  
+- **`gh classroom clone student-repos -a 612817`**: Clones the student repositories for the assignment with ID `612817`.
 
-### Explicación del programa Python
+### Python Program Explanation
 
-A continuación, se explica el código fuente del programa Python de este proyecto. El fichero principal es `download-grades.py` y contiene las siguientes funciones:
+Below is an explanation of the Python code for this project. The main file is `download-grades.py`, which contains the following functions:
 
 ```python
 import requests
@@ -91,34 +90,35 @@ if __name__ == "__main__":
         print(e)
 ```
 
-#### Explicación del código
+#### Code Explanation
 
-1. **Importación de Módulos**:
-    - `import requests`: Importa el módulo `requests` para realizar solicitudes HTTP.
+1. **Module Import**:  
+    - `import requests`: Imports the `requests` module to make HTTP requests.
 
-2. **Función `get_accepted_assignments`**:
-    - **Parámetros**:
-        - `api_url`: La URL base de la API de GitHub Classroom.
-        - `assignment_id`: (Opcional) El ID de la asignación.
-    - **Descripción**:
-        - Construye la URL para obtener las asignaciones aceptadas.
-        - Realiza una solicitud GET a la API.
-        - Si la respuesta es exitosa (código 200), devuelve los datos en formato JSON.
-        - Si hay un error, lanza una excepción con el código de estado de la respuesta.
+2. **Function `get_accepted_assignments`**:  
+    - **Parameters**:  
+        - `api_url`: The base URL of the GitHub Classroom API.  
+        - `assignment_id`: (Optional) The ID of the assignment.  
+    - **Description**:  
+        - Constructs the URL to fetch accepted assignments.  
+        - Sends a GET request to the API.  
+        - If the response is successful (status code 200), it returns the data in JSON format.  
+        - If an error occurs, it raises an exception with the response's status code.  
 
-3. **Función `clone_student_repos`**:
-    - **Parámetros**:
-        - `api_url`: La URL base de la API de GitHub Classroom.
-        - `assignment_id`: El ID de la asignación.
-    - **Descripción**:
-        - Construye la URL para clonar los repositorios de los estudiantes.
-        - Realiza una solicitud POST a la API.
-        - Si la respuesta es exitosa (código 200), devuelve los datos en formato JSON.
-        - Si hay un error, lanza una excepción con el código de estado de la respuesta.
+3. **Function `clone_student_repos`**:  
+    - **Parameters**:  
+        - `api_url`: The base URL of the GitHub Classroom API.  
+        - `assignment_id`: The ID of the assignment.  
+    - **Description**:  
+        - Constructs the URL to clone student repositories.  
+        - Sends a POST request to the API.  
+        - If the response is successful (status code 200), it returns the data in JSON format.  
+        - If an error occurs, it raises an exception with the response's status code.  
 
-4. **Bloque Principal**:
-    - Define la URL base de la API y el ID de la asignación.
-    - Intenta obtener las asignaciones aceptadas y clonar los repositorios de los estudiantes.
-    - Imprime los resultados o el error si ocurre una excepción.
+4. **Main Block**:  
+    - Defines the API's base URL and the assignment ID.
+    - Attempts to fetch accepted assignments and clone student repositories.
+    - Prints the results or the error if an exception occurs.  
 
-Este código proporciona una interfaz básica para interactuar con la API de GitHub Classroom, permitiendo listar asignaciones aceptadas y clonar repositorios de estudiantes.
+This code provides a basic interface to interact with the GitHub Classroom API, allowing you to list accepted assignments and clone student repositories.
+
