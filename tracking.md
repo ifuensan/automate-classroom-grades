@@ -1,16 +1,20 @@
-### Plan
+# Tracking Grades
 
+## Introduction
+
+This document provides a plan and a Python script to track the activity of students in specific GitHub projects. It uses the GitHub API to obtain data such as the number of open issues, open PRs, and comments made by each student in the specified projects. By following the instructions and providing the necessary information, you can easily monitor and visualize the participation of students in class projects.
+
+## Plan
 https://github.com/PyGithub/PyGithub
 
 1. **Receive URLs of projects and GitHub usernames:**
     - Create a function to receive the URLs of the projects and the GitHub usernames.
-
 2. **Get user activity data:**
     - Create functions to get the number of open issues, open PRs, and comments from each user in the specified projects.
 3. **Display the results:**
     - Create a function to display the activity results of each user.
 
-### Code
+## Code
 
 Here is a Python script that tracks the activity of students in the specified GitHub projects:
 
@@ -75,7 +79,7 @@ if __name__ == "__main__":
     main()
 ```
 
-### Reason
+## Reason
 
 1. **Module Import:**
 - `requests`: To make HTTP requests.
@@ -96,7 +100,7 @@ if __name__ == "__main__":
     - Receives the URLs of the projects and the GitHub usernames of the students.
     - Calls `get_user_activity` for each student and displays the results.
 
-### Script Execution
+## Script Execution
 
 To run the script, make sure you have the module installed `PyGithub`:
 
