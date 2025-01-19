@@ -96,18 +96,17 @@ if __name__ == "__main__":
     - Receives the URLs of the projects and the GitHub usernames of the students.
     - Calls `get_user_activity` for each student and displays the results.
 
-### Ejecución del Script
+### Script Execution
 
-Para ejecutar el script, asegúrate de tener instalado el módulo `PyGithub`:
+To run the script, make sure you have the module installed `PyGithub`:
 
 ```bash
 pip install PyGithub
 ```
 
-Luego, ejecuta el script:
+Then, run the script:
 
 ```bash
 python seguimiento_alumnos.py
 ```
-
-Introduce tu token de GitHub, el número de estudiantes, y las URLs de los proyectos y los nombres de usuario de GitHub cuando se te solicite. El script mostrará la actividad de cada estudiante en los proyectos especificados.
+Enter your GitHub token, the number of students, and the URLs of the projects along with the GitHub usernames when prompted. The script will display each student's activity in the specified projects.
