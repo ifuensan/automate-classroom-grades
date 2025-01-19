@@ -2,18 +2,17 @@
 
 https://github.com/PyGithub/PyGithub
 
-1. **Recibir URLs de los proyectos y nombres de usuario de GitHub**:
-    - Crear una función para recibir las URLs de los proyectos y los nombres de usuario de GitHub.
+1. **Receive URLs of projects and GitHub usernames:**
+    - Create a function to receive the URLs of the projects and the GitHub usernames.
 
-2. **Obtener datos de actividad de los usuarios**:
-    - Crear funciones para obtener el número de issues abiertas, PRs abiertas, y comentarios de cada usuario en los proyectos especificados.
+2. **Get user activity data:**
+    - Create functions to get the number of open issues, open PRs, and comments from each user in the specified projects.
+3. **Display the results:**
+    - Create a function to display the activity results of each user.
 
-3. **Mostrar los resultados**:
-    - Crear una función para mostrar los resultados de la actividad de cada usuario.
+### Code
 
-### Código
-
-Aquí tienes un script en Python que realiza el seguimiento de la actividad de los alumnos en los proyectos de GitHub especificados:
+Here is a Python script that tracks the activity of students in the specified GitHub projects:
 
 ```python
 import requests
