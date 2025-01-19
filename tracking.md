@@ -75,16 +75,17 @@ if __name__ == "__main__":
     main()
 ```
 
-### Explicación
+### Reason
 
-1. **Importación de Módulos**:
-    - `requests`: Para realizar solicitudes HTTP.
-    - `github`: Para interactuar con la API de GitHub.
+1. **Module Import:**
+- `requests`: To make HTTP requests.
+- `github`: To interact with the GitHub API.
 
-2. **Funciones para Obtener Datos de Actividad**:
-    - `get_open_issues`: Obtiene el número de issues abiertas por un usuario en un repositorio.
-    - `get_open_prs`: Obtiene el número de PRs abiertas por un usuario en un repositorio.
-    - `get_comments`: Obtiene el número de comentarios de un usuario en un repositorio.
+
+2. **Functions to Get Activity Data**:
+    - `get_open_issues`: Gets the number of open issues by a user in a repository.
+    - `get_open_prs`: Gets the number of open PRs by a user in a repository.
+    - `get_comments`: Gets the number of comments by a user in a repository.
 
 3. **Función `get_user_activity`**:
     - Recibe la URL del repositorio, el nombre de usuario y el token de GitHub.
