@@ -87,14 +87,14 @@ if __name__ == "__main__":
     - `get_open_prs`: Gets the number of open PRs by a user in a repository.
     - `get_comments`: Gets the number of comments by a user in a repository.
 
-3. **Función `get_user_activity`**:
-    - Recibe la URL del repositorio, el nombre de usuario y el token de GitHub.
-    - Utiliza la API de GitHub para obtener el repositorio y los datos de actividad del usuario.
+3. **Function `get_user_activity`**:
+    - Receives the repository URL, the username, and the GitHub token.
+    - Uses the GitHub API to get the repository and the activity data of the user.
 
-4. **Función Principal `main`**:
-    - Solicita al usuario que introduzca su token de GitHub y el número de estudiantes.
-    - Recibe las URLs de los proyectos y los nombres de usuario de GitHub de los estudiantes.
-    - Llama a `get_user_activity` para cada estudiante y muestra los resultados.
+4. **Principal Function `main`**:
+    - Asks the user to enter their GitHub token and the number of students.
+    - Receives the URLs of the projects and the GitHub usernames of the students.
+    - Calls `get_user_activity` for each student and displays the results.
 
 ### Ejecución del Script
 
