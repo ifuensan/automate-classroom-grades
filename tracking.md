@@ -21,7 +21,7 @@ Here is a Python script that tracks the activity of students in the specified Gi
 import requests
 from github import Github
 
-# Función para obtener el número de issues abiertas por un usuario en un repositorio
+#  Function to obtain the number of issues opened by a user in a repository
 def get_open_issues(repo, username):
     issues = repo.get_issues(state='open', creator=username)
     return issues.totalCount
