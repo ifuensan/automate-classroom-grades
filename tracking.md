@@ -21,17 +21,17 @@ Here is a Python script that tracks the activity of students in the specified Gi
 import requests
 from github import Github
 
-#  Function to obtain the number of issues opened by a user in a repository
+# Function to obtain the number of issues opened by a user in a repository
 def get_open_issues(repo, username):
     issues = repo.get_issues(state='open', creator=username)
     return issues.totalCount
 
-# Función para obtener el número de PRs abiertas por un usuario en un repositorio
+# Function to obtain the number of PRs opened by a user in a repository
 def get_open_prs(repo, username):
     prs = repo.get_pulls(state='open', creator=username)
     return prs.totalCount
 
-# Función para obtener el número de comentarios de un usuario en un repositorio
+# Function to get the number of comments from a user in a repository
 def get_comments(repo, username):
     comments = repo.get_issues_comments()
     user_comments = [comment for comment in comments if comment.user.login == username]
