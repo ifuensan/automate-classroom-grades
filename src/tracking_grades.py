@@ -59,16 +59,16 @@ def main():
     students_data = []
     for _ in range(num_students):
         username = input("Enter GitHub Student user: ")
-        repo_url = input("Introduces the URL of the project repository: ")
+        repo_url = input("Enter the URL of the project repository: ")
         students_data.append((repo_url, username))
     
     for repo_url, username in students_data:
         activity = get_user_activity(repo_url, username, token)
-        print(f"Actividad de {username} en {activity['repo']}:")
-        print(f"Issues abiertas: {activity['open_issues']}")
-        print(f"PRs abiertas: {activity['open_prs']}")
+        print(f"{username} activity in {activity['repo']}:")
+        print(f"Open issues: {activity['open_issues']}")
+        print(f"Open PRs: {activity['open_prs']}")
         print(f"Commits: {activity['commits']}")
-        print(f"Comentarios: {activity['comments']}")
+        print(f"Comments: {activity['comments']}")
         print("")
 
 if __name__ == "__main__":
