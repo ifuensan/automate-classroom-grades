@@ -53,13 +53,13 @@ def get_user_activity(repo_url, username, token):
 
 # Función principal para recibir las URLs de los proyectos y los nombres de usuario de GitHub
 def main():
-    token = input("Introduce tu token de GitHub: ")
-    num_students = int(input("Introduce el número de estudiantes: "))
+    token = input("Enter your GitHub token: ")
+    num_students = int(input("Enter the number of students: "))
     
     students_data = []
     for _ in range(num_students):
-        username = input("Introduce el nombre de usuario de GitHub del estudiante: ")
-        repo_url = input("Introduce la URL del repositorio del proyecto: ")
+        username = input("Enter GitHub Student user: ")
+        repo_url = input("Introduces the URL of the project repository: ")
         students_data.append((repo_url, username))
     
     for repo_url, username in students_data:
