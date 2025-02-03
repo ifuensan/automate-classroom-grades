@@ -110,6 +110,6 @@ pip install PyGithub
 Then, run the script:
 
 ```bash
-python seguimiento_alumnos.py
+python tracking_grades.py
 ```
 Enter your GitHub token, the number of students, and the URLs of the projects along with the GitHub usernames when prompted. The script will display each student's activity in the specified projects.
