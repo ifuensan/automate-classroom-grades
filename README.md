@@ -14,7 +14,7 @@ gh extension install github/gh-classroom
 
 This command will download and install the `gh-classroom` extension around `gh`, allowing you to use the additional commands provided by the plugin.
 
-In this repository I intend to make a summary of the main commands that I will later use for the program, but [here](https://github.com/github/gh-classroom) you can find a much more complete explanation of the plugin.
+In this repository I intend to make a summary of the main commands that I will later use for the program, but [here](https://github.com/github/gh-classroom) you can find a much more complete explanation of the plugin. 
 
 ## Get assignments
 
